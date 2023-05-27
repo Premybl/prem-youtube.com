@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            youtube/prem
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    
+<style>
+     p{
+        font-family: Roboto,arial;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .video-grid{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 16px;
+        row-gap: 10px;
+    }
+    @media(max-width: 750px){
+        .video-grid{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media(min-width: 751px) and (max-width: 999px){
+        .video-grid{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+
+
+
+
+
+
+    @media(min-width: 1000px){
+        .video-grid{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    .gridd{
+        display: grid;
+        grid-template-columns: 50px 1fr;
+    }
+    body{
+        margin: 0;
+        padding-top: 70px;
+        height: 3000px;
+        padding-left: 100px;
+        background-color:rgb(255, 251, 251);
+        padding-right: 50px;
+        font-family: Roboto, Arial;
+    }
+       
+        
+    
+    .thumbnail1{
+        position: relative;
+    }
+    .img1{
+       
+        display:block ;
+        width: 100%;
+        margin-top: 15px;
+        
+
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        top: 0px;
+        height: 50px;
+        right: 0px;
+        left: 0px;
+        background-color: white;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(240,240,240);
+        z-index: 100;
+
+
+    }
+    
+    .comp{
+        margin-top: 5px;
+        
+    }
+    .first{
+      
+        display: inline-block;
+        vertical-align: top;
+        
+        
+
+    }
+    .img2{
+        width: 35px;
+        margin-top: 20px;
+        border-radius: 40px;
+    }
+       
+    .middle{
+        flex: 1;
+        margin-left: 70px;
+        margin-right: 35px;
+       
+        max-width: 500px;
+        align-items: center;
+        display: flex;
+
+    }
+    .right{
+        
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between ;
+        flex-shrink: 0;
+        margin-right: 20px;
+
+
+    }
+    .left{
+   
+        
+        align-items: center;
+        display: flex;
+       
+        
+    
+    }
+    
+    .second{
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 5px;}
+        
+    .second1{
+        display: inline-block;
+        margin-top: 10px;
+       
+       
+        
+        
+    }
+    .first1{
+        vertical-align: top;
+        
+    }
+    .comp,
+    .views{
+        font-size: 12px;
+        color: rgb(96,96,96);
+    }
+    .imG1{
+        height: 24px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .imG2{
+        height: 20px;
+    }
+    .search {
+        height: 40px;
+        width: 66px;
+        background-color: rgb(240, 240, 240);
+        border-width: 1px;
+        border-style:solid ;
+        border-color:rgb(192, 192, 192) ;
+        /*border :1px solid color*/
+        margin-left: -1px;
+        margin-right: 10px;
+        position: relative;
+        
+       
+
+
+        
+    }
+    .search,
+.searchmic,
+.icon33{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search .tooltip,
+.searchmic .tooltip,
+.icon33 .tooltip {
+  font-family: Roboto, Arial;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search:hover .tooltip,
+.searchmic:hover .tooltip,
+.icon33:hover .tooltip {
+  opacity: 1;
+}
+    .searchmic{
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        border: none;
+        
+        background-color: rgb(245, 243, 243);
+        
+    }
+    
+    .searchbar{
+        flex: 1;
+        height: 34px;
+        font-size: 16px;
+        padding-left: 10px;
+        border-radius: 2px;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.5);
+        width: 0;
+        
+    }
+    .icon1{
+        height: 25px;
+        
+        
+
+    }
+    .icon2{
+        height: 24px;
+        background-color: rgb(245, 245, 245);
+    }
+    .searchbar::placeholder{
+        font-family: Roboto, Arial;
+        font-size:16px;
+    }
+    .icon3,
+    .icon4,
+    .icon5{
+
+        height: 24px;
+    }
+    .icon6{
+        height: 32px;
+        border-radius: 16px;
+    }
+    .side{
+        position: fixed;
+        left:0;
+        bottom: 0;
+        top: 55px;
+        width: 72px;
+        background-color: white;
+        z-index: 200;
+       
+        
+        
+    }
+    .sidebar{
+        height: 74px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        
+
+        
+    }
+    .sidebar:hover{
+        background-color: gray;
+    }
+    .sidebar img{
+        height: 32px;
+        margin-bottom: 4px;
+    }
+    .side div{
+        font-family: Roboto,Arial;
+        font-size: 10px;
+
+    }
+    
+      
+        
+    
+    
+  
+        
+    
+    .time{
+        background-color: black;
+        color: white;
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        font-family: Roboto,Arial;
+        font-size: 12px;
+        padding: 2px;
+       
+    }
+    .noti{
+        position: relative;
+    }
+    .no{
+        position:absolute;
+        background-color: red;
+        top: -2px;
+        right: -5px;
+        
+        color: white;
+        font-size: 11px;
+        font-family: Roboto,Arial;
+        padding-left: 5px;
+        padding-top: 2px;
+        padding-right: 5px;
+        padding-bottom: 2px;
+        border-radius: 10px;
+    }
+
+</style>
+</head>
+<body>
+<div class="header" > 
+    <div class="left" >
+        <img class=imG1 src="icons/hamburger-menu.svg">
+        <img class=imG2 src="icons/youtube-logo.svg">
+    </div>
+    <div class="middle" > 
+        <input class="searchbar" type="text" placeholder="search">
+        <button class="search"><img class=icon1 src="icons/search.svg">
+        <div class="tooltip" >Search</div></button>
+        <button class="searchmic" ><img class="icon2" src="icons/voice-search-icon.svg"><div class="tooltip" >Search by your voice</div></button>
+    </div>
+    <div class="right"><div class="icon33"><div class="tooltip">create </div>
+        <img class="icon3"src="icons/upload.svg"></div>
+        <img class="icon4"src="icons/youtube-apps.svg"><div class="noti"> <div class="no">3</div>
+        <img class="icon5"src="notifications.svg"></div>
+        <img class="icon6"src="icons/prem1.jpg">
+    </div>
+
+    </div>
+    <div class="side">
+        <div class="sidebar" ><img src="icons/home.svg">Home</div>
+        <div class="sidebar" ><img src="explore.svg">Explore</div>
+        <div class="sidebar" ><img src="subscriptions.svg">Subscriptions</div>
+        <div class="sidebar" ><img src="originals.svg">originals</div>
+        <div class="sidebar" ><img src="youtube-music.svg">Youtube Music</div>
+        <div class="sidebar" ><img src="library.svg">Library</div>
+    </div>
+
+<div class="video-grid">
+<div class ="first">
+   <div class=thumbnail1> <img class="img1" src="thumbnail.webp">
+    <div class="time">
+        3:00
+    </div></div>
+   <div class="gridd">
+<div class="second">
+    <img class="img2" src="sony.jpeg"></div>
+ <div class="second1"><p class="descrip">Veera Simha Reddy - Mass Mogudu Lyric | Nandamuri Balakrishna | Shruti Haasan, Thaman.s
+</p>
+<p class="comp">
+    sony music south
+
+</p>
+<p class="views">
+    1.6M views &#183; 16 hours ago
+</p> 
+ </div>
+</div>
+</div>
+</div>
+<div class ="first">
+    <div class="thumbnail1"> <img class="img1" src="thumbnail2.webp">
+        <div class="time">
+            3:00
+        </div>
+    </div>
+    <div class="gridd">
+ <div class="second">
+    <img class="img2" src="prem.jpeg"></div>
+    <div class ="second1">
+     <p class="descrip">Veera Simha Reddy trailer| Nandamuri Balakrishna | Shruti Haasan, Thaman.s
+ </p>
+ <p class="comp">
+     mytri movie makers
+ 
+ </p>
+ <p class="views">
+     6M views &#183; 22 hours ago
+ </p> 
+    </div>
+ </div>
+ </div>
+ <div class ="first">
+    <div class="thumbnail1" > <img class="img1" src="thumbnail.webp">
+        <div class="time">
+            3:00
+        </div>
+    </div>
+    <div class="gridd">
+ <div class="second">
+     <img class="img2" src="sony.jpeg"></div>
+  <div class="second1"><p class="descrip">Veera Simha Reddy - Mass Mogudu Lyric | Nandamuri Balakrishna | Shruti Haasan, Thaman.s
+ </p>
+ <p class="comp">
+     sony music south
+ 
+ </p>
+ <p class="views">
+     1.6M views &#183; 16 hours ago
+ </p> 
+  </div>
+ </div>
+ </div>
+ <div class ="first">
+     <div class="thumbnail1"> <img class="img1" src="thumbnail2.webp">
+        <div class="time">
+            3:00
+        </div>
+    </div>
+     <div class="gridd">
+  <div class="second">
+     <img class="img2" src="prem.jpeg"></div>
+     <div class ="second1">
+      <p class="descrip">Veera Simha Reddy trailer| Nandamuri Balakrishna | Shruti Haasan, Thaman.s
+  </p>
+  <p class="comp">
+      mytri movie makers
+  
+  </p>
+  <p class="views">
+      6M views &#183; 22 hours ago
+  </p> 
+     </div>
+  </div>
+  </div>
+  <div class ="first">
+    <div class="thumbnail1"> <img class="img1" src="thumbnail.webp">
+        <div class="time">
+            3:00
+        </div>
+    </div>
+    <div class="gridd">
+ <div class="second">
+     <img class="img2" src="sony.jpeg"></div>
+  <div class="second1"><p class="descrip">Veera Simha Reddy - Mass Mogudu Lyric | Nandamuri Balakrishna | Shruti Haasan, Thaman.s
+ </p>
+ <p class="comp">
+     sony music south
+ 
+ </p>
+ <p class="views">
+     1.2M views &#183; 16 hours ago
+ </p> 
+  </div>
+ </div>
+ </div>
+ <div class ="first">
+     <div class="thumbnail1"> <img class="img1" src="thumbnail2.webp">
+        <div class="time">
+            3:00
+        </div>
+    </div>
+     <div class="gridd">
+  <div class="second">
+     <img class="img2" src="prem.jpeg"></div>
+     <div class ="second1">
+      <p class="descrip">Veera Simha Reddy trailer| Nandamuri Balakrishna | Shruti Haasan, Thaman.s
+  </p>
+  <p class="comp">
+      mytri movie makers
+  
+  </p>
+  <p class="views">
+      6M views &#183; 22 hours ago 
+  </p> 
+     </div>
+  </div>
+  </div>
+</div>
+</body>
+
+</html>
